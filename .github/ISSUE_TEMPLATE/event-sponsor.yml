@@ -43,6 +43,16 @@ body:
     validations:
       required: true
 
+  - type: checkboxes
+    id: sponsor-speaker
+    attributes:
+      label: Sponsor Speaker
+      description: "Will the sponsor provide a speaker for the event? If yes, please submit a speaker proposal using this link: [Submit Speaker Proposal](https://github.com/BarcelonaJS/talks/issues/new?assignees=&labels=Pending%3A+ready+for+review&projects=BarcelonaJS%2F2&template=new-talk.yml)"
+      options:
+        - label: Yes, we will provide a speaker
+    validations:
+      required: false
+
   - type: markdown
     attributes:
       value: "## Venue Details"
@@ -92,12 +102,12 @@ body:
   - type: checkboxes
     id: special-guest-details
     attributes:
-      label: Security Details for Special Guests
-      description: Do you require detailed information for special guests for security purposes?
+      label: Building Security Requirements
+      description: Does the building have security requirements that require collecting full names of all guests?
       options:
-        - label: Yes, we need special guest details for security.
+        - label: Yes, we need to collect full names for security reasons.
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: accept-coc
